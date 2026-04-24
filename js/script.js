@@ -32,5 +32,30 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prevSlide();
 });
 
+// =========================================
+// SOPORTE PARA GESTOS TÁCTILES (SWIPE)
+// =========================================
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+    const swipeThreshold = 50; // Distancia mínima para considerar un swipe
+    if (touchEndX < touchStartX - swipeThreshold) {
+        nextSlide(); // Deslizar izquierda -> Siguiente
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+        prevSlide(); // Deslizar derecha -> Anterior
+    }
+}
+
 // Al cargar
 updateSlide();

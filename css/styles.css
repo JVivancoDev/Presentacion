@@ -12,7 +12,11 @@
     --glow-mag: 0 0 15px rgba(255, 0, 255, 0.3);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #111;
@@ -31,7 +35,7 @@ body {
     height: 720px;
     background: var(--bg);
     position: relative;
-    box-shadow: 0 30px 100px rgba(0,0,0,0.8);
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
     border: 1px solid var(--border);
     overflow: hidden;
 }
@@ -41,7 +45,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 40px 40px;
@@ -51,7 +55,7 @@ body {
 .scanlines {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.3) 50%);
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.3) 50%);
     background-size: 100% 4px;
     z-index: 10;
     pointer-events: none;
@@ -87,8 +91,22 @@ body {
     border: 2px solid var(--border);
     z-index: 5;
 }
-.ui-corner.tl { top: 20px; left: 20px; border-right: 0; border-bottom: 0; border-color: var(--cyan); }
-.ui-corner.br { bottom: 20px; right: 20px; border-left: 0; border-top: 0; border-color: var(--magenta); }
+
+.ui-corner.tl {
+    top: 20px;
+    left: 20px;
+    border-right: 0;
+    border-bottom: 0;
+    border-color: var(--cyan);
+}
+
+.ui-corner.br {
+    bottom: 20px;
+    right: 20px;
+    border-left: 0;
+    border-top: 0;
+    border-color: var(--magenta);
+}
 
 .ui-header {
     position: absolute;
@@ -106,10 +124,22 @@ body {
 }
 
 /* Tipografía */
-h1, h2 { font-family: var(--font-mono); text-transform: uppercase; font-weight: 800; }
+h1,
+h2 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-weight: 800;
+}
 
-.accent-cyan { color: var(--cyan); text-shadow: var(--glow-cyan); }
-.accent-mag { color: var(--magenta); text-shadow: var(--glow-mag); }
+.accent-cyan {
+    color: var(--cyan);
+    text-shadow: var(--glow-cyan);
+}
+
+.accent-mag {
+    color: var(--magenta);
+    text-shadow: var(--glow-mag);
+}
 
 /* Slide 1: TITLE */
 .slide-title-hero {
@@ -117,7 +147,13 @@ h1, h2 { font-family: var(--font-mono); text-transform: uppercase; font-weight: 
     align-items: center;
     text-align: center;
 }
-.slide-title-hero h1 { font-size: 90px; line-height: 0.9; margin-bottom: 20px; }
+
+.slide-title-hero h1 {
+    font-size: 90px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+}
+
 .glitch-box {
     padding: 10px 20px;
     border: 1px solid var(--cyan);
@@ -129,12 +165,32 @@ h1, h2 { font-family: var(--font-mono); text-transform: uppercase; font-weight: 
 }
 
 /* Slide Headers */
-.slide-head { margin-bottom: 40px; }
-.slide-head h2 { font-size: 48px; display: flex; align-items: center; gap: 20px; }
-.slide-head h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--cyan), transparent); }
+.slide-head {
+    margin-bottom: 40px;
+}
+
+.slide-head h2 {
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slide-head h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+}
 
 /* Content Modules */
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 20px; }
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
 .feature-box {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -143,12 +199,36 @@ h1, h2 { font-family: var(--font-mono); text-transform: uppercase; font-weight: 
     overflow: hidden;
     transition: border-color 0.3s;
 }
-.feature-box:hover { border-color: var(--cyan); }
-.feature-box i { color: var(--magenta); margin-bottom: 20px; }
-.feature-box h3 { font-family: var(--font-mono); font-size: 18px; margin-bottom: 10px; color: var(--cyan); }
-.feature-box p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
 
-.two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; height: 100%; }
+.feature-box:hover {
+    border-color: var(--cyan);
+}
+
+.feature-box i {
+    color: var(--magenta);
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--cyan);
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+.two-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    height: 100%;
+}
 
 .visual-frame {
     border: 1px solid var(--border);
@@ -158,22 +238,43 @@ h1, h2 { font-family: var(--font-mono); text-transform: uppercase; font-weight: 
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
+
 .visual-frame::before {
     /* content: 'DATA_VISUAL_01'; */
     position: absolute;
-    top: -25px; left: 0;
+    top: -25px;
+    left: 0;
     font-family: var(--font-mono);
     font-size: 10px;
     color: var(--cyan);
 }
 
 /* Table */
-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
-th { font-family: var(--font-mono); text-align: left; padding: 15px; border-bottom: 2px solid var(--cyan); color: var(--cyan); }
-td { padding: 15px; border-bottom: 1px solid var(--border); }
-tr:hover { background: rgba(255, 255, 255, 0.02); }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+th {
+    font-family: var(--font-mono);
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid var(--cyan);
+    color: var(--cyan);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
 
 /* Controls */
 .controls {
@@ -184,6 +285,7 @@ tr:hover { background: rgba(255, 255, 255, 0.02); }
     gap: 20px;
     z-index: 100;
 }
+
 .btn-nav {
     background: none;
     border: 1px solid var(--border);
@@ -194,11 +296,18 @@ tr:hover { background: rgba(255, 255, 255, 0.02); }
     cursor: pointer;
     transition: all 0.3s;
 }
-.btn-nav:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0, 255, 255, 0.05); }
+
+.btn-nav:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: rgba(0, 255, 255, 0.05);
+}
 
 .progress-bar {
     position: absolute;
-    bottom: 0; left: 0; height: 3px;
+    bottom: 0;
+    left: 0;
+    height: 3px;
     background: linear-gradient(90deg, var(--cyan), var(--magenta));
     width: 0%;
     transition: width 0.3s;
@@ -208,26 +317,134 @@ tr:hover { background: rgba(255, 255, 255, 0.02); }
 /* Control de imágenes responsivas en los visual-frame */
 .visual-frame img {
     max-width: 100%;
-    height: auto !important; /* El !important anula tu height: 250px si la pantalla es pequeña */
+    height: auto !important;
+    /* El !important anula tu height: 250px si la pantalla es pequeña */
     object-fit: contain;
+}
+
+/* --- GALLERY STYLES --- */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    /* Ocupa el espacio sobrante debajo del título */
+    min-height: 0;
+    /* CLAVE: Evita que el contenedor crezca más que la pantalla */
+    margin-bottom: 25px;
+    /* Da un respiro a los botones de navegación */
+}
+
+.browser-mockup {
+    background: #1a1a22;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    /* CLAVE */
+}
+
+.mockup-header {
+    background: #0f0f16;
+    padding: 8px 12px;
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+    /* Evita que la barrita superior se aplaste */
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.dot.r {
+    background: #ff5f57;
+}
+
+.dot.y {
+    background: #febc2e;
+}
+
+.dot.g {
+    background: #28c840;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    flex: 1.5;
+    min-height: 0;
+    /* CLAVE */
+}
+
+.mini-mockup {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #050507;
+    overflow: hidden;
+    min-height: 0;
+    /* CLAVE */
+    position: relative;
+}
+
+/* Control maestro de las imágenes */
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* Esto asegura que se vea el menú/logo de la página, no el centro */
+    opacity: 0.9;
+}
+
+/* Fuerza a las imágenes de la cuadrícula a no desbordarse */
+.mini-mockup img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* --- ESTILO DE ENLACES PERSONALIZADOS --- */
+.link-fx {
+    color: var(--magenta);
+    /* El color rosa que querías */
+    text-decoration: none;
+    /* Quita el subrayado */
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.link-fx:hover {
+    color: var(--cyan);
+    /* Cambia a cian al pasar el mouse (efecto Cyber) */
+    text-shadow: var(--glow-cyan);
+    border-bottom: 1px solid var(--cyan);
 }
 
 /* =========================================
    DISEÑO RESPONSIVE (MÓVILES Y TABLETS)
    ========================================= */
 @media (max-width: 1024px) {
+
     /* El contenedor ocupa toda la pantalla del teléfono */
     #deck {
         width: 100vw;
-        height: 100dvh; /* Usa dynamic viewport height */
+        height: 100dvh;
+        /* Usa dynamic viewport height */
         border: none;
         box-shadow: none;
     }
 
     /* Permite scroll vertical si hay mucho texto */
     .slide {
-        padding: 60px 20px 90px 20px; 
-        overflow-y: auto; 
+        padding: 60px 20px 90px 20px;
+        overflow-y: auto;
         justify-content: flex-start;
     }
 
@@ -236,12 +453,22 @@ tr:hover { background: rgba(255, 255, 255, 0.02); }
     }
 
     /* Achicar tipografías gigantes */
-    .slide-title-hero h1 { font-size: 42px; margin-top: 20px; }
-    .slide-head { margin-bottom: 25px; }
-    .slide-head h2 { font-size: 24px; }
-    
+    .slide-title-hero h1 {
+        font-size: 42px;
+        margin-top: 20px;
+    }
+
+    .slide-head {
+        margin-bottom: 25px;
+    }
+
+    .slide-head h2 {
+        font-size: 24px;
+    }
+
     /* Apilar las columnas en una sola (Vertical) */
-    .two-cols, .grid-3 {
+    .two-cols,
+    .grid-3 {
         grid-template-columns: 1fr;
         gap: 25px;
         height: auto;
@@ -267,30 +494,53 @@ tr:hover { background: rgba(255, 255, 255, 0.02); }
         transform: translateX(50%);
         width: 100%;
         justify-content: center;
-        background: rgba(5, 5, 7, 0.95); 
+        background: rgba(5, 5, 7, 0.95);
         padding: 10px 0;
         backdrop-filter: blur(10px);
     }
 
     /* Ocultar decoración que estorba en pantallas pequeñas */
-    .ui-corner { display: none; }
-    
+    .ui-corner {
+        display: none;
+    }
+
     .ui-header {
         left: 20px;
         right: 20px;
         top: 15px;
     }
-    
+
     /* Ocultar texto largo superior para dejar solo el número de slide */
-    .ui-header span:first-child { display: none; } 
+    .ui-header span:first-child {
+        display: none;
+    }
 
     /* OPCIÓN A: Mantener la imagen pero hacerla más pequeña para que no robe pantalla */
     .visual-frame {
         padding: 15px;
         min-height: auto;
     }
+
     .visual-frame img {
-        max-height: 150px; /* Limita la altura máxima en celulares */
+        max-height: 150px;
+        /* Limita la altura máxima en celulares */
+    }
+
+    .gallery-container {
+        justify-content: flex-start;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        /* Pasa a una columna en celular */
+        flex: none;
+        /* Deja de forzar la proporción en celular */
+    }
+
+    .browser-mockup,
+    .mini-mockup {
+        min-height: 200px;
+        /* Asegura un tamaño mínimo tocable en móvil */
     }
 
     /* OPCIÓN B: Si decides que es mejor ocultar la imagen en celular para que el cliente solo lea, borra la OPCIÓN A y descomenta la línea de abajo: */
